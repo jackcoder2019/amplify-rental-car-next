@@ -1,3 +1,79 @@
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import {AddCar, CarRentalNavBar, NewCardCollection, ProductCard, CarRentalCard} from "../src/ui-components";
+import { useState } from 'react';
+import { RentalCar } from "../src/models"
+import { DataStore } from '@aws-amplify/datastore';
+
+export default function Home() {
+  const navbarOverrides = {
+    "image38601372" : {
+      src: "https://img.icons8.com/?size=100&id=15126&format=png&color=000000"
+    },
+    "image3860799" : {
+      src: "avatar1.png"
+    }, 
+    "Button" : {
+      children: "Sign Out 1"
+    }
+  }
+ 
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState(0);
+  const [description, setDescription] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const addCarOverrides = {
+      "TextField38601446" : {
+        onChange : (event) => {
+          setName (event.target.value);
+        } 
+      },
+    "TextField38601447" : {
+      onChange : (event) => {
+        setPrice (event.target.value);
+      } 
+    },
+    "TextField38601471" : {
+      onChange : (event) => {
+        setDescription (event.target.value);
+      } 
+    },
+    "TextField38601445" : {
+      onChange : (event) => {
+        setImageUrl (event.target.value);
+      } 
+    },
+    "Button" : {
+      onClick : () => {
+        DataStore.save(
+          new saveRentalCar
+        )
+      } 
+    },
+  }
+  
+  const saveRentalCar = async () => {
+    try {
+      new RentalCar();
+    } catch (error ) {
+      console.log(error);
+    }
+  } 
+/*
+ Bugatti
+ https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&amp;
+ */
+  return (
+      <div className="App">
+        <CarRentalNavBar overrides = {navbarOverrides}/>
+        <header className="App-header">
+          <AddCar style = {{textAlign : "left", margin : "1rem"}}/>
+          <NewCardCollection/>
+        </header>
+      </div>
+    );
+}
+/*
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -69,3 +145,4 @@ export default function Home() {
     </div>
   )
 }
+*/

@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rentalcar-staging-f1155-authRole",
+      "UnauthRoleArn": "arn:aws:iam::528130062348:role/amplify-rentalcar-staging-f1155-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::528130062348:role/amplify-rentalcar-staging-f1155-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-rentalcar-staging-f1155-deployment",
+      "UnauthRoleName": "amplify-rentalcar-staging-f1155-unauthRole",
+      "StackName": "amplify-rentalcar-staging-f1155",
+      "StackId": "arn:aws:cloudformation:us-east-1:528130062348:stack/amplify-rentalcar-staging-f1155/7a090b10-e459-11ef-8d5b-1212e8afca8f",
+      "AmplifyAppId": "dujm0upwgkc8q"
+    },
+    "categories": {
+      "auth": {
+        "rentalcar": {}
+      }
+    }
+  }
+}
