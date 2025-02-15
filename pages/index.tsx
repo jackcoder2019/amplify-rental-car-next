@@ -62,7 +62,7 @@ export default function Home() {
     },
     */
   }
-   
+ 
 /*
  Bugatti
  https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&amp;
