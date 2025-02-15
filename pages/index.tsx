@@ -24,22 +24,22 @@ export default function Home() {
   const [imageUrl, setImageUrl] = useState("");
   const addCarOverrides = {
       "TextField38601446" : {
-        onChange : (event) => {
+        onChange : (event : any) => {
           setName (event.target.value);
         } 
       },
     "TextField38601447" : {
-      onChange : (event) => {
+      onChange : (event : any) => {
         setPrice (event.target.value);
       } 
     },
     "TextField38601471" : {
-      onChange : (event) => {
+      onChange : (event : any) => {
         setDescription (event.target.value);
       } 
     },
     "TextField38601445" : {
-      onChange : (event) => {
+      onChange : (event : any) => {
         setImageUrl (event.target.value);
       } 
     },
