@@ -22,6 +22,15 @@ export default function Home() {
   const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+/*
+  const saveRentalCar = async () => {
+    try {
+      new RentalCar();
+    } catch (error ) {
+      console.log(error);
+    }
+  }
+  */
   const addCarOverrides = {
       "TextField38601446" : {
         onChange : (event : any) => {
@@ -43,22 +52,17 @@ export default function Home() {
         setImageUrl (event.target.value);
       } 
     },
+    /*
     "Button" : {
       onClick : () => {
         DataStore.save(
-          new saveRentalCar
+          new saveRentalCar()
         )
       } 
     },
+    */
   }
-  
-  const saveRentalCar = async () => {
-    try {
-      new RentalCar();
-    } catch (error ) {
-      console.log(error);
-    }
-  } 
+   
 /*
  Bugatti
  https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&amp;
