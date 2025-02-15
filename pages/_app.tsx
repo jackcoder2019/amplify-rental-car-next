@@ -11,10 +11,11 @@ import { ThemeProvider } from '@aws-amplify/ui-react';
 import {studioTheme}  from '../src/ui-components';
 
 import awsExports from "../src/aws-exports.js";
+import React, { FC } from "react";
 
 Amplify.configure(awsExports, {ssr: true});
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: any ) {
   // Use the Layout component to wrap every page
   return (
     <ThemeProvider theme = {studioTheme}>
