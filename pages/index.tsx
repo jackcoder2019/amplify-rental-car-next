@@ -61,7 +61,7 @@ function Home(user: any) {
       <div className="App">
         <header className="App-header">
           <AddCar style = {{textAlign : "left", margin : "1rem"}}/>
-          <NewCardCollection/>
+          <NewCardCollection width = "640px" height="320px"/>
         </header>
       </div>
     );

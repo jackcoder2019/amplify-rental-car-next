@@ -15,7 +15,7 @@ export default function ActionCard(props) {
       gap="0"
       direction="column"
       width="320px"
-      height="unset"
+      height="635px"
       justifyContent="center"
       alignItems="flex-start"
       position="relative"
